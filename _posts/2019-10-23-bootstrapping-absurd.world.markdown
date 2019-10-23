@@ -2,7 +2,7 @@
 layout: post
 title:  "Bootstrapping absurd.world"
 date:   2019-10-23 23:30:19 +0200
-categories: jekyll update
+categories: bootstrap initial
 ---
 
 # How all started
