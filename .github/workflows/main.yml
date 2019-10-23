@@ -24,6 +24,6 @@ jobs:
     - name: rsync to absurd.world
       run: |
         mkdir -p ~/.ssh
-        ssh-keyscan github.com >> ~/.ssh/known_hosts
+        ssh-keyscan absurd.world >> ~/.ssh/known_hosts
         rsync -avz ./_site/* root@absurd.world:/usr/share/nginx/html/absurdworld
 
