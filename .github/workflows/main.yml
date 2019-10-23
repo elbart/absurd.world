@@ -18,3 +18,9 @@ jobs:
       run: bundle install
     - name: Build the site
       run: bundle exec jekyll build
+    - uses: webfactory/ssh-agent@v0.1.1
+      with:
+        ssh-private-key: ${{ secrets.SSH_PRIVATE }}
+    - name: rsync to absurd.world
+      run: rsync -avz ./_site/* root@absurd.world:/usr/share/nginx/html/absurdworld
+      
